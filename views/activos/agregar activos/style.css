@@ -1,0 +1,60 @@
+.container{
+	border: 2px;
+}
+
+.pagina-cabezado{
+	width: 800px;
+	display: block;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#entrada-texto{
+	width: 500px;
+}
+
+#caja-texto01{
+	width: 500px;
+	height: 100px;
+}
+
+#fecha-01{
+	width: 210px;	
+}
+
+#tiempo-01{
+	width: 210px;
+	margin-left: 0%;
+}
+
+#espacio-lineas{
+	margin-top: 20px;
+}
+
+#part-01{
+	margin-left: 21%;
+	
+}
+
+#part-02{
+	margin-right: 19%;
+}
+
+#imagenPrevisualizacion{
+	width: 550px;
+	height: 399px;
+	margin-top: 7px;
+}
+
+#boton01{
+	position: relative;
+	left: 70%;
+}
+
+#boton02{
+	position: relative;
+	right: -1%;
+}
+
