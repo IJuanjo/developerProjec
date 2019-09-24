@@ -53,5 +53,22 @@ class Activos {
 		$pedido=$this->db->query("SELECT*FROM lista_activos");
 		return $pedido;
 	}
+	public function guardar(){
+		$nombre=$this->getNombre();
+		$des_tecnica=$this->getDes_tecnica();
+		$fecha_compra=$this->getFecha_compra();
+		$fecha_insta=$this->getFecha_insta();
+		$vida_horas=$this->getVida_horas();
+		$sql="INSERT INTO controldeactivos(nombre,des_tecnica,fecha_compra,fecha_insta,vida_horas) 
+		values ($nombre,$des_tecnica,$fecha_compra,$fecha_insta,$vida_horas)";
+		$sta=$this->db->query($sql);
+		$mensaje='';
+		if($sta){
+			$mensaje='stored whit success';
+		}else{
+			$mensaje='error';
+		}
+		return $mensaje;
+	}	
 }
 ?>
