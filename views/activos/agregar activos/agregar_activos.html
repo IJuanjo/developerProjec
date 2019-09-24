@@ -12,50 +12,40 @@
 		<h1>Guardar activos</h1>				
 	</div>
 	<div class="mx-auto">
-		<div class="row">
-			<div class="col" id="part-01">
-				<div class="form-group">
-					<label id="espacio-lineas">Nombre:</label>
-					<input type="text" class="form-control" id="entrada-texto">
-					<label id="espacio-lineas">Descripción técnica:</label>
-					<textarea class="form-control" id="caja-texto01"></textarea>
-					<label id="espacio-lineas">Fecha de compra:</label>
-					<div class="row">
-						<div class="col">
-							<input type="date" class="form-control" id="fecha-01">
-						</div>
-						<div class="col">
-							<input type="time" class="form-control" id="tiempo-01">
-						</div>
-					</div>
-					<label id="espacio-lineas">Fecha de instalación:</label>
-					<div class="row">
-							<div class="col">
-								<input type="date" class="form-control" id="fecha-01">
+		<div class="container">
+			<div class="row" id="contenedor01">
+				<div class="col" id="part-01">
+					<form action="POST">
+						<div class="form-group">
+							<label id="espacio-lineas">Nombre:</label>
+							<input type="text" class="form-control" id="entrada-texto">
+							<label id="espacio-lineas">Descripción técnica:</label>
+							<textarea class="form-control" id="caja-texto01"></textarea>
+							<label id="espacio-lineas">Fecha de compra:</label>
+							<div class="row">
+								<div class="col">
+									<input type="date" class="form-control" id="fecha-01">
+								</div>
+								<div class="col">
+									<input type="time" class="form-control" id="tiempo-01">
+								</div>
 							</div>
-							<div class="col">
-								<input type="time" class="form-control" id="tiempo-01">
-							</div>
+							<label id="espacio-lineas">Fecha de instalación:</label>
+							<div class="row">
+									<div class="col">
+										<input type="date" class="form-control" id="fecha-01">
+									</div>
+									<div class="col">
+										<input type="time" class="form-control" id="tiempo-01">
+									</div>
+								</div>
+							<label id="espacio-lineas">Horas de vida:</label>
+							<input type="text" class="form-control" id="fecha-01">
 						</div>
-					<label id="espacio-lineas">Horas de vida:</label>
-					<input type="text" class="form-control" id="fecha-01">
-				</div>
-				<br/>
-				<a href="principal.html" role="button" class="btn btn-primary btn-lg" id="boton01">Guardar</a>
-			</div>
-			<div class="col" id="part-02">
-				<div class="form-group">				
-					<div>
-						<label id="espacio-lineas">Agregar imagen:</label>
-					</div>
-					<input type="file" id="seleccionArchivos" accept="image/*"/>
+					</form>
 					<br/>
-					<br/>
-					<img id="imagenPrevisualizacion" class="rounded">
-					<script src="jscript.js"></script>				
+					<a href="principal.html" role="button" class="btn btn-primary btn-lg" id="boton01">Guardar</a>
 				</div>
-				<br/>
-				<a href="principal.html" role="button" class="btn btn-primary btn-lg" id="boton02">Cancelar</a>			
 			</div>
 		</div>
 	</div>
