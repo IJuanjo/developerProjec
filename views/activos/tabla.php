@@ -17,7 +17,9 @@
       <td><?=$row->des_tecnica?></td>
       <td>
         <a href="#" class="btn btn-primary">ver</a >
-        <a  href="#" class="btn btn-danger">Eliminar</a >
+     <form action="<?=base_url?>activos/delete" method="GET">
+     <a href="<?=base_url?>activos/delete?id=<?=$row->cod_maq?>" class="btn btn-danger">Elminar</a>
+    </form>
       </td>
     </tr>   
     <?php endwhile; ?>

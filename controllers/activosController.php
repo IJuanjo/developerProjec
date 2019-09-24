@@ -29,5 +29,10 @@ Class ActivosController{
         }
         header("Location:".base_url.'activos/guardar');
     }
+    public function delete(){
+       if(isset($_GET['id'])){
+        echo "se encontro";
+       }
+    }
     
 }

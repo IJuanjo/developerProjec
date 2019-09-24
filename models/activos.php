@@ -71,7 +71,10 @@ class Activos {
 		return $mensaje;
 	}
 	public function delete(){
-		
+		$id=$this->getCod_maq();
+		$sql="DELETE FROM lista_activos where cod_maq=$id ";
+		$result=$this->db->query($sql);
+		return $result;
 	}	
 }
 ?>
