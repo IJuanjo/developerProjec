@@ -6,7 +6,7 @@ require_once 'config/parameters.php';
 require_once 'views/layouts/header.php';
 function error(){
     $error=new ErrorController();
-    $error::Error();
+    $error::index();
 }
 
 if(isset($_GET)){

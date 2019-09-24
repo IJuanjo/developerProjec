@@ -1,6 +1,6 @@
 <?php
 Class ErrorController{
-    public static function Error(){
-        return "Page not found";
+    public static function index(){
+        echo "<h1>Page not found</h1>";
     }
 }
