@@ -13,10 +13,21 @@ Class ActivosController{
        $nombre=isset($_POST['nombre'] ) ? $_POST['nombre'] : false;
        $desc_tecnica=isset($_POST['descripcion'] ) ? $_POST['descripcion'] : false;
        $fecha=isset($_POST['fecha'] ) ? $_POST['fecha'] : false;
-       $tiempo=isset($_POST['tiempo'] ) ? $_POST['tiempo'] : false;
        $fecha2=isset($_POST['fecha2'] ) ? $_POST['fecha2'] : false;
-       $tiempo2=isset($_POST['tiempo2'] ) ? $_POST['tiempo2'] : false;
        $horasv=isset($_POST['horasv'] ) ? $_POST['horasv'] : false;
+       $activo=new Activos();
+        $activo->setNombre($nombre);
+        $activo->setDes_tecnica($desc_tecnica);
+        $activo->setFecha_compra($fecha);
+        $activo->setFecha_insta($fecha2);
+        $activo->setVida_horas($horasv);
+        $resultado=$activo->guardar();
+        if($resultado){
+            $_SESSION['resultado']=$resultado;
+        }else{
+         $_SESSION['resultado']='hubo un error';
+        }
+        header("Location:".base_url.'activos/guardar');
     }
     
 }

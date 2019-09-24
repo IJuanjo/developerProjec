@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'autoload.php';
 require_once 'config/database.php';
 require_once 'helpers/helpers.php';

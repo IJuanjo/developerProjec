@@ -59,16 +59,19 @@ class Activos {
 		$fecha_compra=$this->getFecha_compra();
 		$fecha_insta=$this->getFecha_insta();
 		$vida_horas=$this->getVida_horas();
-		$sql="INSERT INTO controldeactivos(nombre,des_tecnica,fecha_compra,fecha_insta,vida_horas) 
-		values ($nombre,$des_tecnica,$fecha_compra,$fecha_insta,$vida_horas)";
+		$sql="INSERT INTO lista_activos (nombre,des_tecnica,fecha_compra,fecha_insta,vida_horas) 
+		values ('$nombre','$des_tecnica','$fecha_compra','$fecha_insta','$vida_horas')";
 		$sta=$this->db->query($sql);
 		$mensaje='';
 		if($sta){
-			$mensaje='stored whit success';
+			$mensaje='guardado con exito!';
 		}else{
 			$mensaje='error';
 		}
 		return $mensaje;
+	}
+	public function delete(){
+		
 	}	
 }
 ?>

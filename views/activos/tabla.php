@@ -1,4 +1,5 @@
 <div class="container mt-5">
+  <a href="<?=base_url?>activos/guardar" class="btn btn-outline-primary mb-4">Agregar nuevo activo</a>
 <table class="table">
   <thead class="thead-dark">
     <tr>
