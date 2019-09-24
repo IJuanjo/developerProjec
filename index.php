@@ -1,5 +1,7 @@
 <?php
 require_once 'autoload.php';
+require_once 'config/database.php';
+require_once 'helpers/helpers.php';
 require_once 'config/parameters.php';
 require_once 'views/layouts/header.php';
 function error(){
