@@ -9,7 +9,11 @@ class Mantenimiento {
 	private $fallas;
 	private $cod_tec;
 	private $cod_man;
-
+	private $db;
+	public function __construct()
+	{
+		$this->db=Conexion::conectar();
+	}
 	public function getCodigo_c(){
 		return $this->codigo_c;
 	}
@@ -64,4 +68,28 @@ class Mantenimiento {
 	public function setCod_man($cod_man){
 		$this->cod_man=$cod_man;
 	}
+
+	public function addmantenimiento(){
+		$fecha_rev=getFecha_rev();
+		$tipo_man=getTipo_man();
+		$fecha_de_inicio=getFecha_inicio();
+		$observacion=getObservacion();
+		$fallas=getFallas();
+		$cod_tec=getCod_tec();
+		$cod_man=getCod_man();
+		$sql="INSERT into cronograma(fecha_rev,tipo_man,fecha_inicio,fecha_termino,observacion,fallas,cod_tec,cod_maq,cod_man)
+		values $fecha_rev,$tipo_man,$fecha_de_inicio,$observacion,$fallas,$cod_tec,$cod_man";
+		$ejecucion=$this->db->query($sql);
+		$status=false;
+		if($ejecucion){
+			$status=true;
+		}
+		return $status;
+	}
+	public function getAllMantenimiento(){
+			$sql="SELECT*from cronograma";
+			$mantenimiento=$this->db->query($sql);
+			return $mantenimiento;
+	}
+	
 }	
